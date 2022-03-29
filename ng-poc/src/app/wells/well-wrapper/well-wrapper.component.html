@@ -1,0 +1,8 @@
+<a [routerLink]="['/']" routerLinkActive="router-link-active" > back to main</a>
+<h1>Wells POC</h1>
+
+<app-well 
+[wellDetails] = "wellDetails"
+(newItemEvent)="onAddNewItem($event)"
+></app-well>
+<app-well-list [wells]=wells (selectedItem)="onViewSelectedItem($event)"></app-well-list>

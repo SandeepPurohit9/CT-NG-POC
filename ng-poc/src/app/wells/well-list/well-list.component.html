@@ -1,0 +1,24 @@
+<div class="container">
+
+    <!-- well list starts -->
+    <table class="table table-bordered info">
+        <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr *ngFor="let well of wells; let i = index">
+              <td>{{well.name | titlecase}}</td>
+              <td [ngClass]="well?.type === 'rls' ? 'success' : 'danger'">{{well.type }}</td>
+              <td [ngStyle]="{'text-decoration': 'underline'}" (click)="viewSelected(i)">{{well.sourceKey }}</td>
+            </tr>
+          </tbody>
+          
+    </table>
+    <!-- well list starts -->
+
+</div>
