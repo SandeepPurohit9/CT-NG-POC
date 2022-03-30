@@ -5,18 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { MainComponent } from './main/main.component';
-import { WellsModule } from './wells/wells.module';
+import { DragWrapperComponent } from './dynamic-drag/drag-wrapper/drag-wrapper.component';
+import { PlaceHolderDirective } from './shared/place-holder.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    MainComponent
+    MainComponent,
+    DragWrapperComponent,
+    PlaceHolderDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    WellsModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

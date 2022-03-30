@@ -1,0 +1,25 @@
+<a [routerLink]="['/']" routerLinkActive="router-link-active"> back to main</a>
+<h1>Dynamic Drags POC</h1>
+
+<div class="container">
+    <div class="row">
+        <p>Drag items here </p>
+        <div class="col-xs-6 drag-area"  
+        (drop)="drop($event)" 
+        (dragover)="allowDrop($event)">
+            <ng-template appPlaceHolder></ng-template>
+        </div>
+        <div class="col-xs-6 comp-list">
+            <p>Drag items from list </p>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info"
+                id="section-{{i}}"
+                draggable="true"
+                (dragstart)="drag($event, section)"
+                *ngFor="let section of dynamicSections; let i = index;">{{section.name}}</li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
