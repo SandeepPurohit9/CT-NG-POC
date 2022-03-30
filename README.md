@@ -2,6 +2,7 @@
 
 ✨CT-NG-POC contains all angular POCs under a single codebase
 
+![App Screenshot](https://github.com/SandeepPurohit9/CT-NG-POC/blob/main/ng-poc/src/assets/Screenshot%202022-03-30%20at%207.03.19%20PM.png)
 
 ## POC-list
 
