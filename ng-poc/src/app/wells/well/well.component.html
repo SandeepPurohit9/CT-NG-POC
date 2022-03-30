@@ -1,0 +1,32 @@
+<p>Add new well</p>
+<div class="container">
+
+<!-- well form starts -->
+
+<form [formGroup]="createWellForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Name: </label>
+        <input id="name" class="form-control" type="text" formControlName="name">
+    </div>
+
+    <div class="form-group">
+        <label for="type">Type: </label>
+        <input id="type" class="form-control" type="text" formControlName="type">
+    </div>
+   
+    <div class="form-group">
+    <label for="source-key">Source Key: </label>
+    <input id="source-key" class="form-control" type="text" formControlName="sourceKey">
+    </div>
+    
+    <!-- well form ends -->
+    
+    <div class="form-group text-center">
+        <button  class="btn btn-primary">
+            <!-- <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
+            Add Well
+        </button>
+    </div>   
+</form>
+
+</div>

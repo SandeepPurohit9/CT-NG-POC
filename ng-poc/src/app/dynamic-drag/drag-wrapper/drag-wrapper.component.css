@@ -1,0 +1,10 @@
+.container .drag-area{
+    border: 2px solid #8c8b8b;
+    height: 20vh;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.container .comp-list li{
+    list-style: none;
+}

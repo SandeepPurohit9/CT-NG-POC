@@ -1,0 +1,31 @@
+<h1>User Details</h1>
+
+<div class="container">
+<a [routerLink]="['/']" routerLinkActive="router-link-active" > back to main</a>
+
+    <!-- Table -->
+    <table class="table table-bordered info">
+        <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{user.name | titlecase}}</td>
+              <td>{{user.age }}</td>
+            </tr>
+          </tbody>
+          
+    </table>
+
+
+    <h1>Toggle paragraph content using ngIf</h1>
+    <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
+    <br>
+    <div *ngIf="show; else elseBlock">Text to show</div>
+    
+    <ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>
+  </div>
